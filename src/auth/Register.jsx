@@ -1,17 +1,20 @@
 import { useState } from "react";
+import { useAuth } from "./authContext";
 import { Link, useNavigate } from "react-router";
 
 const Register = () => {
+  const { register } = useAuth();
   const [error, setError] = useState();
   const navigate = useNavigate();
 
-  const tryRegister = (formData) => {
+  const tryRegister = async (formData) => {
     const firstName = formData.get("first-name");
     const lastName = formData.get("last-name");
     const email = formData.get("email");
     const password = formData.get("password");
+
     try {
-      Register({ firstName, lastName, email, password });
+      await register({ firstName, lastName, email, password });
       navigate("/books");
     } catch (e) {
       setError(e.message);

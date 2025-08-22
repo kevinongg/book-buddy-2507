@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router";
 
 const Login = () => {
   const { login } = useAuth();
-  const navigate = useNavigate();
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const tryLogin = async (formData) => {
     const email = formData.get("email");

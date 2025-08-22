@@ -5,7 +5,7 @@ const useMutation = (method, resource, tagsToInvalidate) => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [request, invalidateTags] = useApi();
+  const { request, invalidateTags } = useApi();
 
   const mutate = async (body) => {
     setLoading(true);

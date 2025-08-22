@@ -9,7 +9,10 @@ import Layout from "./layout/layout";
 import BooksPage from "./books/BooksPage";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
-import SingleBookPage from "./books/SingleBookDetail";
+// import SingleBookPage from "./books/SingleBookPage";
+import SingleBookDetail from "./books/SingleBookDetail";
+import Account from "./auth/Account";
+import ReturnBook from "./auth/ReturnBook";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,10 +25,15 @@ createRoot(document.getElementById("root")).render(
               <Route path={"/books"} element={<BooksPage />}></Route>
               <Route
                 path={"/books/:bookId"}
-                element={<SingleBookPage />}
+                element={<SingleBookDetail />}
+              ></Route>
+              <Route
+                path={"/reservations/:reservationId"}
+                element={<ReturnBook />}
               ></Route>
               <Route path={"/login"} element={<Login />}></Route>
               <Route path={"/register"} element={<Register />}></Route>
+              <Route path={"/account"} element={<Account />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>
