@@ -1,6 +1,23 @@
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+nav img {
+  width: 30px;
+}
+
+.books img {
+  width: 90px;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.nav-right {
+  display: flex;
   gap: 1rem;
 }

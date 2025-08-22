@@ -4,9 +4,16 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <p>Book Buddy</p>
-        <NavLink to="/books">Books</NavLink>
-        <NavLink to="">Log In</NavLink>
+        <div className="nav-left">
+          <NavLink to="/books">
+            <img src="/books.png" alt="books" />
+            Book Buddy
+          </NavLink>
+        </div>
+        <div className="nav-right">
+          <NavLink to="/books">Books</NavLink>
+          <NavLink to="/login">Log In</NavLink>
+        </div>
       </nav>
     </header>
   );
