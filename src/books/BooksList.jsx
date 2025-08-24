@@ -1,8 +1,9 @@
-import useQuery from "../api/useQuery";
+// import useQuery from "../api/useQuery";
 import { Link } from "react-router";
 
-const BooksList = () => {
-  const { data: books, loading, error } = useQuery("/books", "books");
+const BooksList = ({ books, loading, error }) => {
+  // Lifted useQuery here to parent component to pass down as props to this component and searchbar
+  // const { data: books, loading, error } = useQuery("/books", "books");
   // console.log(books);
 
   if (loading) return <p>Loading...</p>;

@@ -4,14 +4,14 @@ import { Link } from "react-router";
 const Reservations = ({ user }) => {
   // console.log(user);
   const reservations = user.reservations;
+  console.log(reservations);
   if (reservations.length === 0)
     return (
       <p>
-        You have not reserved any books yet. Browse{" "}
+        You have not reserved any books yet. Browse
         <Link to="/books">our catalog</Link>!
       </p>
     );
-  console.log(reservations);
   return (
     <div>
       {reservations.map((reservation) => {

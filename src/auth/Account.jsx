@@ -5,7 +5,7 @@ import Reservations from "./Reservations";
 
 const Account = () => {
   const { token } = useAuth();
-  const { data: user, loading, error } = useQuery("/users/me", "user");
+  const { data: user } = useQuery("/users/me", "user");
   // console.log(user);
 
   if (!token)
