@@ -1,7 +1,7 @@
 // import { useState } from "react";
 // import FilteredResults from "./FilteredResults";
 
-const SearchBar = ({ books, results }) => {
+const SearchBar = ({ books, filteredResults }) => {
   // const [searchResults, setSearchResults] = useState([]);
 
   const search = (formData) => {
@@ -17,8 +17,8 @@ const SearchBar = ({ books, results }) => {
       return filteredTitle || filteredAuthor;
     });
     // console.log(filtered);
-    results(filtered);
-    console.log(results);
+    filteredResults(filtered);
+    console.log(filteredResults);
   };
 
   return (

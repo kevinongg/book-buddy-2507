@@ -10,7 +10,7 @@ const BooksPage = () => {
   const [searching, setSearching] = useState(false);
 
   // console.log(books);
-  const xyz = (result) => {
+  const filteredResultPasser = (result) => {
     setSearchResults(result);
     setSearching(true);
   };
@@ -18,9 +18,12 @@ const BooksPage = () => {
   return (
     <>
       <h1>Catalog</h1>
-      <SearchBar books={books} results={xyz} />
-      <FilteredResults searchResults={searchResults} />
-      <BooksList books={books} loading={loading} error={error} />
+      <SearchBar books={books} filteredResults={filteredResultPasser} />
+      {searching ? (
+        <FilteredResults searchResults={searchResults} />
+      ) : (
+        <BooksList books={books} loading={loading} error={error} />
+      )}
     </>
   );
 };
