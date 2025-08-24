@@ -1,23 +1,209 @@
+body {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+body a {
+  text-decoration: none;
+  color: #0b9b63;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding: 0;
+  margin: 0;
+}
+
+/***** NAVBAR SECTION *****/
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: space-between;
+  padding: 3px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-top: 1rem;
 }
 
-nav img {
-  width: 30px;
+.nav.left {
+  display: flex;
+  align-items: center;
+}
+
+.nav.left a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav.left img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.nav.right {
+  display: flex;
+  gap: 0.5rem;
+  padding: 8px;
+}
+
+.nav.right a:hover {
+  color: #f32424;
+}
+
+.nav.right a.active {
+  color: #f32424;
+  text-decoration: underline;
+}
+
+/***** SEARCHBAR SECTION *****/
+.search-bar h1 {
+  margin: 5px;
+}
+
+.search-bar input {
+  width: 72%;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  width: 25%;
+  cursor: pointer;
+}
+
+.back button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/***** BOOKS SECTION *****/
+.books {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+.books-title {
+  margin: 0;
+}
+
+.books-author {
+  font-weight: bold;
+  margin: 0;
+}
+
+.books-description {
+  margin: 0px;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+  overflow: hidden;
+  /* width: 100%; */
+  /* display: block; */
+}
+
+.book-imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .books img {
-  width: 90px;
+  width: 80px;
 }
 
-.nav-left {
-  display: flex;
+.books button {
+  margin-top: 5px;
+  font-weight: bold;
 }
 
-.nav-right {
-  display: flex;
+.books.single img {
+  width: 180px;
+}
+
+/***** ACCOUNT SECTION *****/
+.account {
+  padding: 0.75rem;
+}
+.account h1 {
+  margin: 2px 0px;
+}
+
+.account h2 {
+  margin: 2px 0px;
+}
+
+.account p {
+  margin: 2px 0px;
+}
+
+.reserved-books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #eeeeee;
+  padding: 6px;
+  margin-bottom: 8px;
   gap: 1rem;
+  align-items: center;
+}
+
+/***** LOGIN SECTION *****/
+.login-container {
+  padding: 0.25rem;
+}
+
+.login-container h1 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-container label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.register-link {
+  margin-top: 5px;
+}
+
+/***** REGISTER SECTION *****/
+.register-container {
+  padding: 0.25rem;
+}
+
+.register-container h1 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.register-container label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.login-link {
+  margin-top: 5px;
 }

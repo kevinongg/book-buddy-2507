@@ -8,7 +8,7 @@ const Reservations = ({ user }) => {
   if (reservations.length === 0)
     return (
       <p>
-        You have not reserved any books yet. Browse
+        {"You have not reserved any books yet. Browse "}
         <Link to="/books">our catalog</Link>!
       </p>
     );
@@ -16,8 +16,8 @@ const Reservations = ({ user }) => {
     <div>
       {reservations.map((reservation) => {
         return (
-          <div key={reservation.id}>
-            {reservation.title}
+          <div key={reservation.id} className="reserved-books">
+            {<Link to={"/books/:bookId"}>{reservation.title}</Link>}
             {reservation.author}
             <ReturnBook reservationId={reservation.id} />
           </div>

@@ -12,21 +12,22 @@ const Navbar = () => {
             Book Buddy
           </NavLink>
         </div>
+
         <div className="nav right">
           <NavLink to="/books">Books</NavLink>
-        </div>
-        {token ? (
-          <div className="nav right">
-            <NavLink to="/account">Account</NavLink>
-            <NavLink to="/books" onClick={() => logout()}>
-              Log Out
-            </NavLink>
-          </div>
-        ) : (
-          <div className="nav right">
+
+          {token ? (
+            <>
+              <NavLink to="/account">Account</NavLink>
+
+              <NavLink to="/" onClick={() => logout()}>
+                Log Out
+              </NavLink>
+            </>
+          ) : (
             <NavLink to="/login">Log In</NavLink>
-          </div>
-        )}
+          )}
+        </div>
       </nav>
     </header>
   );

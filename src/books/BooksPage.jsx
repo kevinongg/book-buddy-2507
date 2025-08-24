@@ -22,16 +22,17 @@ const BooksPage = () => {
 
   return (
     <>
-      <h1>Catalog</h1>
-      <SearchBar books={books} filteredResults={filteredResultPasser} />
-      {searching ? (
-        <FilteredResults
-          searchResults={searchResults}
-          backToBooks={backToBooks}
-        />
-      ) : (
-        <BooksList books={books} loading={loading} error={error} />
-      )}
+      <div>
+        <SearchBar books={books} filteredResults={filteredResultPasser} />
+        {searching ? (
+          <FilteredResults
+            searchResults={searchResults}
+            backToBooks={backToBooks}
+          />
+        ) : (
+          <BooksList books={books} loading={loading} error={error} />
+        )}
+      </div>
     </>
   );
 };

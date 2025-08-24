@@ -22,7 +22,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div className="register-container">
       <h1>Register for an account</h1>
       <form action={tryRegister}>
         <label>
@@ -44,8 +44,10 @@ const Register = () => {
         <button>Register</button>
         {error && <output>{error}</output>}
       </form>
-      <Link to="/login">Already have an account? Log in here.</Link>
-    </>
+      <div className="login-link">
+        <Link to="/login">Already have an account? Log in here.</Link>
+      </div>
+    </div>
   );
 };
 

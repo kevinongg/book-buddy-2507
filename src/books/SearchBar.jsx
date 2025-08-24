@@ -22,7 +22,8 @@ const SearchBar = ({ books, filteredResults }) => {
   };
 
   return (
-    <>
+    <div className="search-bar">
+      <h1>Catalog</h1>
       <form action={search}>
         <label>
           <input
@@ -34,8 +35,7 @@ const SearchBar = ({ books, filteredResults }) => {
         </label>
         <button type="submit">Search</button>
       </form>
-      {/* <FilteredResults searchResults={searchResults} /> */}
-    </>
+    </div>
   );
 };
 

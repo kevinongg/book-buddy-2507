@@ -17,7 +17,7 @@ const Account = () => {
   if (!user) return <p>No user data</p>;
 
   return (
-    <>
+    <div className="account">
       <div>
         <h1>Welcome, {user.firstname}</h1>
         <p>Your email on file with us is {user.email}</p>
@@ -26,7 +26,7 @@ const Account = () => {
         <h2>Your reservations</h2>
         <Reservations user={user} />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="login-container">
       <h1>Log in to your account</h1>
       <form action={tryLogin}>
         <label>
@@ -43,8 +43,10 @@ const Login = () => {
         <button>Login</button>
         {error && <output>{error}</output>}
       </form>
-      <Link to={"/register"}>Need an account? Register here.</Link>
-    </>
+      <div className="register-link">
+        <Link to={"/register"}>Need an account? Register here.</Link>
+      </div>
+    </div>
   );
 };
 

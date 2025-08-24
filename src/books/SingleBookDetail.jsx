@@ -13,17 +13,17 @@ const SingleBookDetail = () => {
   if (error) return <p>Book not found</p>;
 
   return (
-    <>
-      <div className="books">
+    <div className="books single">
+      <div className="book-imgDiv">
         <img src={book?.coverimage} />
       </div>
       <div>
-        <h2>{book?.title}</h2>
-        <p>{book?.author}</p>
-        <p>{book?.description}</p>
+        <h2 className="books-title">{book?.title}</h2>
+        <p className="books-author">{book?.author}</p>
+        <p className="books-description">{book?.description}</p>
         {token && <ReserveBook book={book} />}
       </div>
-    </>
+    </div>
   );
 };
 

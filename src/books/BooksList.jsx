@@ -14,15 +14,15 @@ const BooksList = ({ books, loading, error }) => {
       {books?.map((book) => {
         return (
           <div key={book.id} className="books">
-            <div>
+            <div className="book-imgDiv">
               <img src={book.coverimage} alt={book.title} />
             </div>
             <div>
               <Link to={`/books/${book.id}`}>
-                <h2>{book.title}</h2>
+                <h2 className="books-title">{book.title}</h2>
               </Link>
-              <p>{book.author}</p>
-              <p>{book.description}</p>
+              <p className="books-author">{book.author}</p>
+              <p className="books-description">{book.description}</p>
             </div>
           </div>
         );
