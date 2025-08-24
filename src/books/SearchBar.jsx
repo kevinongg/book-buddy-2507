@@ -18,7 +18,7 @@ const SearchBar = ({ books, filteredResults }) => {
     });
     // console.log(filtered);
     filteredResults(filtered);
-    console.log(filteredResults);
+    // console.log(filteredResults);
   };
 
   return (

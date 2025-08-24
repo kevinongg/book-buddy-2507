@@ -1,6 +1,9 @@
-const FilteredResults = ({ searchResults }) => {
+const FilteredResults = ({ searchResults, backToBooks }) => {
   return (
     <>
+      <div>
+        <button onClick={backToBooks}>Back to all Books</button>
+      </div>
       {searchResults.map((results) => {
         return (
           <div key={results.id}>

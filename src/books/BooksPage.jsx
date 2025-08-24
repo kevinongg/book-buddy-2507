@@ -15,12 +15,20 @@ const BooksPage = () => {
     setSearching(true);
   };
 
+  const backToBooks = () => {
+    setSearchResults(null);
+    setSearching(false);
+  };
+
   return (
     <>
       <h1>Catalog</h1>
       <SearchBar books={books} filteredResults={filteredResultPasser} />
       {searching ? (
-        <FilteredResults searchResults={searchResults} />
+        <FilteredResults
+          searchResults={searchResults}
+          backToBooks={backToBooks}
+        />
       ) : (
         <BooksList books={books} loading={loading} error={error} />
       )}
